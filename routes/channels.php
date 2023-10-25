@@ -18,4 +18,6 @@ Broadcast::channel('App.Models.User.{id}', function ($user, $id) {
 });
 
 
-
+Broadcast::channel('post-updates', function ($user) {
+    return ['id' => $user->id];
+});
